@@ -1,0 +1,31 @@
+/* Global Styles */
+body {
+     margin: 0;
+     padding: 0;
+     background-color: #0d1117;
+     color: #c9d1d9;
+     font-family: Arial, sans-serif;
+}
+
+/* Container for the chart */
+.chart-container {
+     width: 90%;
+     max-width: 800px;
+     height: 400px;
+     margin: 40px auto;
+     background-color: #161b22;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+     transition: transform 0.3s ease;
+}
+
+.chart-container:hover {
+     transform: scale(1.02);
+}
+
+canvas {
+     display: block;
+     width: 100% !important;
+     height: 100% !important;
+}

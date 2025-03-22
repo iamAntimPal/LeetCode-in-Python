@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode Activity Graph</title>
+  <link rel="stylesheet" href="leetcode-activity.css">
+  <!-- Include Chart.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="chart-container">
+    <canvas id="leetcodeChart"></canvas>
+  </div>
+
+  <script>
+    // Sample data for LeetCode activity (replace with dynamic data if available)
+    const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const dataPoints = [12, 18, 25, 20, 30, 45, 40, 38, 50, 55, 48, 35];
+
+    const ctx = document.getElementById('leetcodeChart').getContext('2d');
+    const leetCodeChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'LeetCode Activity',
+          data: dataPoints,
+          borderColor: '#628fdb',
+          backgroundColor: 'rgba(98, 143, 219, 0.2)',
+          fill: true,
+          tension: 0.4,
+          pointBackgroundColor: '#8a87f0',
+          pointRadius: 5,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: {
+          duration: 1500,
+          easing: 'easeOutBounce'
+        },
+        scales: {
+          x: {
+            grid: {
+              color: '#2a2d38'
+            },
+            ticks: {
+              color: '#c9d1d9'
+            }
+          },
+          y: {
+            grid: {
+              color: '#2a2d38'
+            },
+            ticks: {
+              color: '#c9d1d9'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#c9d1d9'
+            }
+          },
+          tooltip: {
+            backgroundColor: '#1a1a1a',
+            titleColor: '#ffffff',
+            bodyColor: '#c9d1d9'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -6,3 +6,4 @@
 *.md linguist-vendored
 *.json linguist-vendored
 *.html linguist-vendored
+*.CSS linguist-vendored

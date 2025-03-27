@@ -29,3 +29,21 @@ canvas {
      width: 100% !important;
      height: 100% !important;
 }
+
+/* Update button styling */
+button#updateData {
+     display: block;
+     margin: 20px auto;
+     padding: 10px 20px;
+     background-color: #238636;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button#updateData:hover {
+     background-color: #2ea043;
+     transform: scale(1.05);
+}

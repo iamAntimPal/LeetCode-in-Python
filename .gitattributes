@@ -7,3 +7,4 @@
 *.json linguist-vendored
 *.html linguist-vendored
 *.CSS linguist-vendored
+*.javascript linguist-vendored
